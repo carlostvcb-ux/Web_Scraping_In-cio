@@ -1,0 +1,68 @@
+---
+title: "Modelo_Inicial_Web_Scraping"
+author: "Carlos Alberto Alves de Meneses,20180003202"
+date: "2023-04-02"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r include=TRUE, warning=FALSE}
+library(rvest)
+library(shiny)
+library(xml2)
+
+# Define a função de scraping
+scrape_news <- function() {
+  # URL do site de notícias
+  url <- "https://www.portalt5.com.br"
+  
+  # Faz o scraping dos títulos das notícias
+  webpage <- read_html(url)
+  titles <- webpage %>% html_nodes("a") %>% html_text()
+  
+  # Retorna os títulos
+   return(titles)
+   #return(headline_text)
+}
+
+# Define o UI do dashboard
+ui <- fluidPage(
+  # Título
+  titlePanel("Notícias do PortalT5"),
+  
+  # Texto explicativo
+  sidebarLayout(
+    sidebarPanel(
+      p("Aqui estão os títulos das últimas notícias do PortalT5.")
+    ),
+    
+    # Exibe os títulos das notícias em um lista
+    mainPanel(
+      verbatimTextOutput("titles")
+    )
+  )
+)
+
+# Define o server do dashboard
+server <- function(input, output) {
+  # Chama a função de scraping e exibe os títulos
+  output$titles <- renderText({
+    scrape_news()
+  })
+}
+
+# Roda o dashboard
+shinyApp(ui = ui, server = server)
+
+```
+
+A seguir será feita a atualização desse scripte.
+
+########
+#########
+########
+
