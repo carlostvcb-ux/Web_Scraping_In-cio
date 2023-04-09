@@ -1,5 +1,5 @@
 ---
-title: "Modelo_Inicial_Web_Scraping"
+title: "Web Scraping: implementação de um modelo em R para extração de notícias jornalísticas."
 author: "Carlos Alberto Alves de Meneses,20180003202"
 date: "2023-04-02"
 output: word_document
@@ -10,116 +10,43 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-```{r include=TRUE, warning=FALSE}
-#library(rvest)
-#library(shiny)
-#library(xml2)
+```{r include=TRUE, warning=FALSE, message=FALSE}
+library(rvest)
+library(shiny)
+library(xml2)
 
 # Define a função de scraping
-#scrape_news <- function() {
+scrape_news <- function() {
   # URL do site de notícias
-  #url <- "https://www.portalt5.com.br"
+  url <- "https://www.portalt5.com.br"
   
   # Faz o scraping dos títulos das notícias
-  #webpage <- read_html(url)
-  #titles <- webpage %>% html_nodes("a") %>% html_text()
+  webpage <- read_html(url)
+  titles <- webpage %>% 
+    html_nodes(".portalt5-destaque__lista__item--last") %>% 
+    html_text()
   
   # Retorna os títulos
-   #return(titles)
+   return(titles)
    #return(headline_text)
-#}
-
-# Define o UI do dashboard
-#ui <- fluidPage(
-  # Título
-  #titlePanel("Notícias do PortalT5"),
-  
-  # Texto explicativo
-  #sidebarLayout(
-    #sidebarPanel(
-      #p("Aqui estão os títulos das últimas notícias do PortalT5.")
-    #),
-    
-    # Exibe os títulos das notícias em um lista
-    #mainPanel(
-     # verbatimTextOutput("titles")
-     
-   # )
-  #)
-#)
-
-# Define o server do dashboard
-#server <- function(input, output) {
-  # Chama a função de scraping e exibe os títulos
-  #output$titles <- renderText({
-   # scrape_news()
-  #})
-#}
-
-# Roda o dashboard
-#shinyApp(ui = ui, server = server)
-
-```
-
-A seguir será feita a atualização desse scripte.
-
-```{r}
-# Carregando a biblioteca
-library(rvest)
-library(xml2)
-library(shiny)
-library(dplyr)
-
-# Definir as URLs dos sites web que iremos raspar
-urls <- c("https://www.portalt5.com.br/", "https://paraibaonline.com.br/", "https://jornaldaparaiba.com.br/")
-
-# Definindo uma função para raspar os dados de uma página da web
-
-scrape_data <- function(url) {
- 
-  # Lendo o conteúdo da página web
- 
-  page <- read_html(url)
- 
-  # Extrair os dados de interesse utilizando seletores CSS
-  # Exemplo: extrainho os títulos das noticias
- 
-  titles <- page %>%
-    html_nodes("h1") %>%
-    html_text2()
- 
-  # Devolve  os dados extraídos
-  return(titles)
-  
-}
-
-# Aplica a função scrape_data a cada URL utilizando a função lapply
-
-#resultados <- lapply(urls, scrape_data)
-resultados <- lapply(urls, scrape_data)
-# Imprimi os resultados
-
-for (i in 1:length(resultados)) {
-  cat("Manchetes", i, ":\n")
-  print(resultados[[i]])
 }
 
 # Define o UI do dashboard
 ui <- fluidPage(
   # Título
-  titlePanel("Notícias da Paraíba"),
+  titlePanel("Notícias do PortalT5"),
   
   # Texto explicativo
   sidebarLayout(
     sidebarPanel(
-      p("Aqui estão as manchetes das últimas notícias da Paraíba.")
+      p("Aqui estão os títulos das últimas notícias do PortalT5.")
     ),
     
     # Exibe os títulos das notícias em um lista
     mainPanel(
       verbatimTextOutput("titles")
      
-    )
+   )
   )
 )
 
@@ -127,7 +54,7 @@ ui <- fluidPage(
 server <- function(input, output) {
   # Chama a função de scraping e exibe os títulos
   output$titles <- renderText({
-    scrape_data()
+    scrape_news()
   })
 }
 
@@ -135,4 +62,7 @@ server <- function(input, output) {
 shinyApp(ui = ui, server = server)
 
 ```
+
+
+
 
