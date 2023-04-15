@@ -9,59 +9,276 @@ output: word_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+## Web Scraping
 
-```{r include=TRUE, warning=FALSE, message=FALSE}
-library(rvest)
+Nessa primeira fase do projeto iremos nos concentrar na obtenção dos dados de apenas um site, neste caso do *portal do Jornal da Paraíba*, deixando a implementações de outros sites de noticias para trabalhos futuros.
+
+**Executando a raspagem da web passo a passo, usando o pacote rvest R escrito por Hadley Wickham**.
+
+O *rvest* é uma biblioteca R muito útil que ajuda a coletar informações da páginas da web.
+
+O primeiro passo é baixar e carregar os pacotes necessários.
+
+```{r warning=FALSE}
+# Baixando e carregando o pacote
+library( rvest )
+library( xml2 )
 library(shiny)
-library(xml2)
+library(httr)
+library(httr2)
+```
 
-# Define a função de scraping
-scrape_news <- function() {
-  # URL do site de notícias
-  url <- "https://www.portalt5.com.br"
-  
-  # Faz o scraping dos títulos das notícias
-  webpage <- read_html(url)
-  titles <- webpage %>% 
-    html_nodes(".portalt5-destaque__lista__item--last") %>% 
-    html_text()
-  
-  # Retorna os títulos
-   return(titles)
-   #return(headline_text)
-}
+O pacote rvest define o link da página da web como o primeiro passo. Depois disso, os rótulos apropriados devem ser definidos. A linguagem HTML edita o conteúdo usando várias tags e seletores.
 
-# Define o UI do dashboard
-ui <- fluidPage(
-  # Título
-  titlePanel("Notícias do PortalT5"),
-  
-  # Texto explicativo
-  sidebarLayout(
-    sidebarPanel(
-      p("Aqui estão os títulos das últimas notícias do PortalT5.")
-    ),
-    
-    # Exibe os títulos das notícias em um lista
-    mainPanel(
-      verbatimTextOutput("titles")
-     
-   )
-  )
-)
+Esses seletores devem ser identificados e marcados para armazenamento de seu conteúdo. Em seguida, todos os dados gravados podem ser transformados em um conjunto de dados apropriado e a análise pode ser realizada.
 
-# Define o server do dashboard
-server <- function(input, output) {
-  # Chama a função de scraping e exibe os títulos
-  output$titles <- renderText({
-    scrape_news()
-  })
-}
+Coletaremos um conjunto de dados de um portal de notícias (www.jornaldaparaiba.com.br). Este site fornece informações gerais e principalmente do estado da Paraíba.
 
-# Roda o dashboard
-shinyApp(ui = ui, server = server)
+Vamos comerçar a coletar informações para descobrir quais as principais noticias que estão sendo vinculadas neste portal.
+
+* Para coletar as informações sobre as principais manchetes do portal, usaremos a URL da página de destino do site.
+
+```{r}
+# Link para:
+url <-  " https://jornaldaparaiba.com.br/ "
+url
+```
+
+Como mencionamos, estamos interessado em coletar dados sobre as materias jornalisticas publicadas no site.
+
+Agora, a parte que mais nos importa: a coleta dos dados!
+
+O script a seguir, fornece os seguintes procedimentos: visite o URL da página da Web, coletando nós HTML usando a função *read_html*.
+
+Para analisar nós HTML, estamos usando as regras XPath.
+
+```{r}
+# Ler o HTML da página da web
+url <- c("https://www.jornaldaparaiba.com.br")
+
+pagina <- read_html(url)
+
+elementos <- pagina %>%
+  html_nodes("div.container a") #Aplicando as regras XPath
 
 ```
+
+XPath lida principalmente com os nós das árvores XML 1.0 ou XML 1.1. Ë usado para representar a estrutura hierárquica de um documento XML.
+
+XPath usa sintaxe não XML e funciona na estrutura lógica de documentos XML. XPath é projetado para ser usado embutido em uma linguagem de programação.
+
+XPath tem sete tipos diferentes de nós: elemento, atributo, texto, namespace, instrução de processamento, comentário e nós de documento.
+
+Para este projeto, estamos usando a função *html_nodes* e definindo nossas regras XPath , que já temos, dentro da função:
+
+*html_nodes(""div.container a"")*
+
+O código a seguir realiza as duas funções anteriores e exibe o conteúdo da raspagem dos dados através da função *cat*.
+
+
+```{r include=TRUE, warning=FALSE}
+# Carregar o pacote rvest
+library(rvest)
+library(xml2)
+library(shiny)
+library(httr)
+library(httr2)
+
+# Ler o HTML da página da web
+url <- "https://www.jornaldaparaiba.com.br"
+
+pagina <- read_html(url)
+
+dt <- html_nodes(pagina, "div.container a")
+
+# Exibir o conteúdo dos elementos selecionados
+cat("Conteúdo dos elementos selecionados:\n")
+cat(html_text(dt), sep = "\n")
+
+```
+
+Nesse ponto, concluímos a primeira fase do nosso projeto, realizando a raspagem das manchetes principais do *portal do Jornal da Paraíba*.
+
+**Processamento dos dados**
+
+Para Moreira e Rocabado (2022), a análise de conteúdo só é possível através da transformação do texto bruto em estruturas de dados convenientes para análise.
+
+* Temos basicamente três estruturas num texto:
+
+* **Tokens:** O texto pode ser armazenado em n-grams ou cadeias de caracteres (*strings*).
+
+* **Corpus:** Estruturas que armazenam tanto o conteúdo de documentos como seus metadados.
+
+* **Matris de documentos e termos (DFM ou DTM):** É uma matriz esparsa com uma linha para cada documento e uma coluna para cada termo.
+
+A análise do conteúdo do texto como dado exige versatilidade na transformação entre estruturas.
+
+Utilizaremos especialmente os pacotes *tidytext* e *quanteda*, ambos estruturais para análise de conteúdo.
+
+Antes de aplicarmos a tokenizaão nos nossos dados (texto) coletados, precisamos transformá-los para o formato aceito pelo *tidytext* que é um data.frame.
+
+```{r}
+library(tidyverse)
+library(tidytext)
+library(quanteda)
+library(dplyr)
+library(rvest)
+library(xml2)
+
+texto <- (html_text(dt))
+texto <- str_replace_all(texto,"\\(",")")
+texto <- str_replace_all(texto, "\\)","")
+texto <- str_replace_all(texto,"\n","")
+texto <- str_replace_all(texto,"\t","")
+texto
+texto <- as.vector(texto)
+
+
+text_df <- tibble(line=1:56, text= texto)
+
+text_df
+```
+
+**Armazenando dados como data.frame**.
+
+* Salvando dados em disco no formato csv
+
+Se os dados já estiverem armazenados como um data.frame:
+
+```{r}
+
+write.csv(text_df,file = "text_df.csv")
+
+```
+
+Um objeto *tibble* é uma classe moderna de *data.frame* dentro do R, disponível nos pacotes *dplyr* e *tibble*, que possui um método de impressão conveniente, não converte *strins* em fatores e não usa nomes de linha (MOREIRA; ROCABADO, 2022).
+
+Porém, o objeto *tibble* ainda não está no formato aceito pelo pacote *tidytext*.
+
+Precisaremos converter-lo em outro formato que atenda a condição *one-token-per-document-per-row*.
+
+Portanto, cada *token unigram* (cada palavra) deve ser um valor indicado. Utilizaremos a função *unnest_tokens* do pacote *tidytext* para realizar o processo de *tokenização*.
+
+**Tokens**
+
+* O formato tidytext
+
+Usar os principios do *tidytext* é uma maneira poderosa de tornar o processamento de dados mais ágil e eficaz. Conforme Wickham (2014), os dados organizados têm uma estrutura especifica:
+
+* Cada variável é uma coluna;
+
+* Cada observação é uma linha;
+
+* Cada tipo de unidade de observação é uma tabela.
+
+Assim, o formato do *tidytext* segue a mesma estrutura apresentada, na qual cada linha/observação possui uma unidade de texto significativa, também chamada por *token*, estes organizadas em uma coluna/variável.
+
+O *token* pode ser uma única palavra, um conjunto de palavras, uma frase ou um parágrafo. O processo consiste em realizar a *tokenização*, em que dividimos o texto em *tokens*.
+
+**Token usando a função unnest_tokens**
+
+```{r}
+library(tidytext)
+
+text_token <- text_df %>%
+  unnest_tokens(word, text)
+
+text_token
+
+```
+
+Iremos remover elementos da nossa base de dados (caso haja) que não agregam valor a depender da análise. esses lementos são chamados de *stopwords* e podemos removê-los utilizando o pacote *quanteda*.
+
+
+```{r}
+#stopwords
+library(quanteda)
+
+stop_w <- tibble(word = stopwords(source = "stopwords-iso", language = "pt"))
+
+#retirar do corpus as stopwords
+tidy_text <- text_token %>% 
+  anti_join(stop_w) 
+
+```
+
+Com a nossa base de dados no formato *tidy* podemos iniciar algumas análises como, por exemplo, a contagem da frequência de palavras ou *tokens*.
+
+```{r}
+text_token %>%
+  count(word, sort = TRUE)
+
+```
+
+Também podemos visualizar as frequências calculadas:
+
+```{r}
+text_token %>%
+  count(word, sort = TRUE) %>%
+  mutate(word = fct_reorder(word, n)) %>%
+  slice(1:20) %>%
+  ggplot(aes(word, n)) +
+  geom_col() +
+  coord_flip() +
+  labs(x="") 
+```
+
+Com a base de dados em formato *tidy*, podemos utilizar os meta-dados dos documentos em nossas análises.
+
+**Selecionando tokens**
+
+* Tokens sem pontuação e sem números
+
+```{r}
+#Transformando o data.frame em um corpus
+corp <- corpus(texto)
+summary(corp, 10)
+
+#Tokens sem pontuação e sem sequência
+toks <- tokens(corp, remove_punct = T, remove_numbers = T)
+
+```
+
+* Tokens sem stopword
+
+```{r}
+# Removendo as stopwords
+toks_nostop <- tokens_select(toks, pattern = stopwords('pt'),
+                             selection = 'remove')
+```
+
+
+**Gerando n-grams**
+
+O método de apresentado nâo respeita a ordem em que as palavras foram escritas, no entanto, para algumas análises essa ordem importa. Para garantir essa ordem, podemos criar *tokens* com *N-grams* para garantir que a ordem de palavras esteja presente no processo de *tokenização*. 
+
+Através da função *tokens_ngrams()* é possível aplicar esse método.
+
+```{r}
+# criando n-grams
+toks_ngram <- tokens_ngrams(toks, n = 1:4)
+toks_ngram
+```
+
+**Nuvem de palavras**
+
+Uma forma da visualização de frequência na análise de texto é a nuvem de palavras.
+
+Iremos utilizar a função *textplo_wordcloud()* do pacote *quanteda*.
+
+```{r}
+library(quanteda.textplots)
+#criando uma DFM com as hashtags
+dfmat_texto <- dfm(toks)
+set.seed(132)
+textplot_wordcloud(dfmat_texto, max_words = 100)
+```
+
+
+
+
+
+
 
 
 
