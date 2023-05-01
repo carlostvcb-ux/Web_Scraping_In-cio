@@ -1,15 +1,88 @@
 ---
 title: "Web Scraping: implementação de um modelo em R para extração de notícias jornalísticas."
-author: "Carlos Alberto Alves de Meneses,20180003202"
+author: ""
 date: "2023-04-02"
-output: word_document
+output: 
+  word_document:
+    reference_docx: /Users/user/Documents/estilo.docx
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r setup, echo=FALSE,message=FALSE,warning=FALSE,include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,message = F,warning = F)
 ```
 
-## Web Scraping
+
+# Carlos Alberto Alves de Meneses, Prof. Dr. Pedro Rafael Diniz Marinho
+
+## Departamento de Estatística - Universidade Federal da Paraíba Cidade Universitária, s/n, João Pessoa - PB [calberto\@cabobranco.tv.br](mailto:calberto@cabobranco.tv.br){.email}, [Pedro.rafael.marinho\@gmail.com](mailto:Pedro.rafael.marinho@gmail.com){.email}
+
+### Carlos Alberto Alves de Meneses, Prof. Dr. Pedro Rafael Diniz Marinho
+
+#### Departamento de Estatística - Universidade Federal da Paraíba Cidade Universitária, s/n, João Pessoa - PB [calberto\@cabobranco.tv.br](mailto:calberto@cabobranco.tv.br){.email}, [Pedro.rafael.marinho\@gmail.com](mailto:Pedro.rafael.marinho@gmail.com){.email}
+
+**1. Introdução**
+
+Na televisão, como em qualquer outro veículo de comunicação de massa, o jornalista busca a factualidade, ou seja, fatos que sejam importantes para serem passadas para seus telespectadores.
+
+Nesse sentido, cabe ao produtor de notícias "minerar" esses fatos, localizando-os o mais rápido possível, de preferência de forma exclusiva, antes da concorrência, e enviá-los para os repórteres produzirem as matérias com o intuito de gerar índices altos de audiência.
+
+A tarefa do produtor de notícias implica em:
+
+-   Verificar o que as empresas concorrentes estão noticiando
+
+-   Utilizar métodos de radioescuta, para obter noticias que estão sendo vinculadas nas rádios locais
+
+-   Pesquisar nas redes sociais (internet) sobre os assuntos mais comentados no momento
+
+-   Produzir as pautas do dia contendo um resumo das noticias que serão utilizadas como bases para que os repórteres preparem suas matérias
+
+O produtor de notícias é, em geral, um profissional formado em jornalismo e faz parte de uma equipe de profissionais (chefe de redação, editores de texto, etc.) que trabalham em uma redação de jornalismo numa empresa de Televisão, por exemplo.
+
+No entanto, nos dias atuais as notícias surgem com uma rapidez muito grande devido ao fato das pessoas possuírem equipamentos com câmeras e microfones de alta qualidade, como smartphones, que produzem dados em tempo real, gerando cotidianamente um volume de dados, principalmente nas redes sociais, gigantesco.
+
+Com isso, faz-se necessário que a mineração de dados da WEB seja uma tarefa automatizada através da aplicação de algoritmos.
+
+Diante disso, a proposta deste projeto é a utilização de técnicas de *web scraping* a fim de facilitar a mineração desses dados e produzir relatórios para os produtores de televisão automaticamente.
+
+**1.2 Objetivos**
+
+Geral: implementar um modelo de web scraping para raspagem de notícias da internet.
+
+Objetivos específicos:
+
+• Analisar as bibliotecas da linguagem R utilizadas na web scraping;
+
+• Elaborar e documentar o código de web scraping utilizado no modelo;
+
+• Testar e implementar o modelo proposto.
+
+**1.3 Metodologia**
+
+Em termos metodológicos, este projeto será desenvolvido para oferecer um guia rápido sobre técnicas e softwares de web scraping que podem ser usados para extrair dados de sites.
+
+Os dados são uma parte essencial de qualquer pesquisa, seja ela acadêmica, de marketing ou cientifica.
+
+Para Lima (2022), uma das coisas mais importantes no Campo da Ciência de Dados é a habilidade de obter dados certos para o problema que você deseja resolver.
+
+A World Wide Web (WWW) contém todos os tipos de informações de diferentes fontes. As pessoas podem querer coletar e analisar dados de vários sites.
+
+**1.4 Fundamentação teórica**
+
+Segundo Silva (2021) existem várias maneiras de extrair informações da web, sendo o uso de APIs, provavelmente, a melhor maneira de extrair dados de um website, os quais estão disponíveis no Twitter, Facebook, Google, StackOverflow, dentre outros.
+
+Dentre as técnicas de programação de extração de dados da web, a Web Scraping permite obter informações de qualquer página da web por ser uma técnica que foca, principalmente, na transformação de dados não estruturados (formato HTML) da Web em dados estruturados (Banco de dados, JSON ou Planilha).
+
+A web scraping é, portanto, uma prática de coletar dados por qualquer meio que não seja um programa interagindo com uma API (ou, obviamente, por um ser humano usando um navegador web). Isso é comumente feito escrevendo um programa automatizado que consulta um servidor web, requisita dados (em geral, na forma de HTML e de outros arquivos que compõem as páginas web) e então faz análises desses dados para extrair as informações necessárias. Na prática, a web scraping engloba uma grande variedade de técnicas de programação e de tecnologias, por exemplo, análise de dados, análise de idiomas naturais e segurança de informação.
+
+Sendo assim, independentemente da área profissional, a web scraping quase sempre oferece uma forma de orientar práticas de negócios com mais eficiência, melhorar a produtividade ou até mesmo dar origem a uma área totalmente nova (MITCHELL, 2019).
+
+Quanto à linguagem de programação de código aberto (open source), pode-se fazer uso do software R por ter muitas bibliotecas para executar funções de Web Scraping, tais como:
+
+-   rvest
+
+-   Rselenium
+
+**2. Web Scraping**
 
 Nessa primeira fase do projeto iremos nos concentrar na obtenção dos dados de apenas um site, neste caso do *portal do Jornal da Paraíba*, deixando a implementações de outros sites de noticias para trabalhos futuros.
 
@@ -17,9 +90,9 @@ Nessa primeira fase do projeto iremos nos concentrar na obtenção dos dados de 
 
 O *rvest* é uma biblioteca R muito útil que ajuda a coletar informações da páginas da web.
 
-O primeiro passo é baixar e carregar os pacotes necessários.
+A primeira providência é baixar e carregar os pacotes necessários.
 
-```{r warning=FALSE}
+```{r message=FALSE,warning=FALSE}
 # Baixando e carregando o pacote
 library( rvest )
 library( xml2 )
@@ -34,9 +107,9 @@ Esses seletores devem ser identificados e marcados para armazenamento de seu con
 
 Coletaremos um conjunto de dados de um portal de notícias (www.jornaldaparaiba.com.br). Este site fornece informações gerais e principalmente do estado da Paraíba.
 
-Vamos comerçar a coletar informações para descobrir quais as principais noticias que estão sendo vinculadas neste portal.
+Vamos começar a coletar informações para descobrir quais as principais noticias que estão sendo vinculadas neste portal.
 
-* Para coletar as informações sobre as principais manchetes do portal, usaremos a URL da página de destino do site.
+-   Para coletar as informações sobre as principais manchetes do portal, usaremos a URL da página de destino do site.
 
 ```{r}
 # Link para:
@@ -44,7 +117,7 @@ url <-  " https://jornaldaparaiba.com.br/ "
 url
 ```
 
-Como mencionamos, estamos interessado em coletar dados sobre as materias jornalisticas publicadas no site.
+Como mencionamos, estamos interessado em coletar dados sobre as matérias jornalísticas publicadas no site.
 
 Agora, a parte que mais nos importa: a coleta dos dados!
 
@@ -59,8 +132,8 @@ url <- c("https://www.jornaldaparaiba.com.br")
 pagina <- read_html(url)
 
 elementos <- pagina %>%
-  html_nodes("div.container a") #Aplicando as regras XPath
-
+  html_nodes("div.container a")%>%
+   html_text2()
 ```
 
 XPath lida principalmente com os nós das árvores XML 1.0 ou XML 1.1. Ë usado para representar a estrutura hierárquica de um documento XML.
@@ -74,7 +147,6 @@ Para este projeto, estamos usando a função *html_nodes* e definindo nossas reg
 *html_nodes(""div.container a"")*
 
 O código a seguir realiza as duas funções anteriores e exibe o conteúdo da raspagem dos dados através da função *cat*.
-
 
 ```{r include=TRUE, warning=FALSE}
 # Carregar o pacote rvest
@@ -93,29 +165,31 @@ dt <- html_nodes(pagina, "div.container a")
 
 # Exibir o conteúdo dos elementos selecionados
 cat("Conteúdo dos elementos selecionados:\n")
-cat(html_text(dt), sep = "\n")
-
+cat(html_text(dt), sep = "\n") 
+#head(html_text(dt))
 ```
 
 Nesse ponto, concluímos a primeira fase do nosso projeto, realizando a raspagem das manchetes principais do *portal do Jornal da Paraíba*.
 
-**Processamento dos dados**
+**2.1 Processamento dos dados**
 
 Para Moreira e Rocabado (2022), a análise de conteúdo só é possível através da transformação do texto bruto em estruturas de dados convenientes para análise.
 
-* Temos basicamente três estruturas num texto:
+-   Temos basicamente três estruturas num texto:
 
-* **Tokens:** O texto pode ser armazenado em n-grams ou cadeias de caracteres (*strings*).
+-   **Tokens:** O texto pode ser armazenado em n-grams ou cadeias de caracteres (*strings*).
 
-* **Corpus:** Estruturas que armazenam tanto o conteúdo de documentos como seus metadados.
+-   **Corpus:** Estruturas que armazenam tanto o conteúdo de documentos como seus metadados.
 
-* **Matris de documentos e termos (DFM ou DTM):** É uma matriz esparsa com uma linha para cada documento e uma coluna para cada termo.
+**2.2 Matriz de documentos e termos (DFM ou DTM):**
+
+É uma matriz esparsa com uma linha para cada documento e uma coluna para cada termo.
 
 A análise do conteúdo do texto como dado exige versatilidade na transformação entre estruturas.
 
 Utilizaremos especialmente os pacotes *tidytext* e *quanteda*, ambos estruturais para análise de conteúdo.
 
-Antes de aplicarmos a tokenizaão nos nossos dados (texto) coletados, precisamos transformá-los para o formato aceito pelo *tidytext* que é um data.frame.
+Antes de aplicarmos a tokenização nos nossos dados (texto) coletados, precisamos transformá-los para o formato aceito pelo *tidytext* que é um data.frame.
 
 ```{r}
 library(tidyverse)
@@ -124,6 +198,7 @@ library(quanteda)
 library(dplyr)
 library(rvest)
 library(xml2)
+library(tibble)
 
 texto <- (html_text(dt))
 texto <- str_replace_all(texto,"\\(",")")
@@ -131,51 +206,47 @@ texto <- str_replace_all(texto, "\\)","")
 texto <- str_replace_all(texto,"\n","")
 texto <- str_replace_all(texto,"\t","")
 texto
-texto <- as.vector(texto)
 
-
-text_df <- tibble(line=1:56, text= texto)
+text_df <- tibble(line=length(texto), text= texto)
 
 text_df
 ```
 
-**Armazenando dados como data.frame**.
+**2,4 Armazenando dados como data.frame**.
 
-* Salvando dados em disco no formato csv
+-   Salvando dados em disco no formato csv
 
 Se os dados já estiverem armazenados como um data.frame:
 
 ```{r}
-
 write.csv(text_df,file = "text_df.csv")
-
 ```
 
 Um objeto *tibble* é uma classe moderna de *data.frame* dentro do R, disponível nos pacotes *dplyr* e *tibble*, que possui um método de impressão conveniente, não converte *strins* em fatores e não usa nomes de linha (MOREIRA; ROCABADO, 2022).
 
 Porém, o objeto *tibble* ainda não está no formato aceito pelo pacote *tidytext*.
 
-Precisaremos converter-lo em outro formato que atenda a condição *one-token-per-document-per-row*.
+Precisaremos converte-lo em outro formato que atenda a condição *one-token-per-document-per-row*.
 
 Portanto, cada *token unigram* (cada palavra) deve ser um valor indicado. Utilizaremos a função *unnest_tokens* do pacote *tidytext* para realizar o processo de *tokenização*.
 
-**Tokens**
+**2,5 Tokens**
 
-* O formato tidytext
+-   O formato tidytext
 
-Usar os principios do *tidytext* é uma maneira poderosa de tornar o processamento de dados mais ágil e eficaz. Conforme Wickham (2014), os dados organizados têm uma estrutura especifica:
+Usar os princípios do *tidytext* é uma maneira poderosa de tornar o processamento de dados mais ágil e eficaz. Conforme Wickham (2014), os dados organizados têm uma estrutura especifica:
 
-* Cada variável é uma coluna;
+-   Cada variável é uma coluna;
 
-* Cada observação é uma linha;
+-   Cada observação é uma linha;
 
-* Cada tipo de unidade de observação é uma tabela.
+-   Cada tipo de unidade de observação é uma tabela.
 
 Assim, o formato do *tidytext* segue a mesma estrutura apresentada, na qual cada linha/observação possui uma unidade de texto significativa, também chamada por *token*, estes organizadas em uma coluna/variável.
 
 O *token* pode ser uma única palavra, um conjunto de palavras, uma frase ou um parágrafo. O processo consiste em realizar a *tokenização*, em que dividimos o texto em *tokens*.
 
-**Token usando a função unnest_tokens**
+**2.6 Token usando a função unnest_tokens**
 
 ```{r}
 library(tidytext)
@@ -183,17 +254,18 @@ library(tidytext)
 text_token <- text_df %>%
   unnest_tokens(word, text)
 
-text_token
+head(text_token)
 
 ```
 
 Iremos remover elementos da nossa base de dados (caso haja) que não agregam valor a depender da análise. esses lementos são chamados de *stopwords* e podemos removê-los utilizando o pacote *quanteda*.
 
-
 ```{r}
 #stopwords
 library(quanteda)
-
+library(stopwords)
+library(tibble)
+library(dplyr)
 stop_w <- tibble(word = stopwords(source = "stopwords-iso", language = "pt"))
 
 #retirar do corpus as stopwords
@@ -213,6 +285,7 @@ text_token %>%
 Também podemos visualizar as frequências calculadas:
 
 ```{r}
+library(ggplot2)
 text_token %>%
   count(word, sort = TRUE) %>%
   mutate(word = fct_reorder(word, n)) %>%
@@ -225,9 +298,9 @@ text_token %>%
 
 Com a base de dados em formato *tidy*, podemos utilizar os meta-dados dos documentos em nossas análises.
 
-**Selecionando tokens**
+**2.7 Selecionando tokens**
 
-* Tokens sem pontuação e sem números
+-   Tokens sem pontuação e sem números
 
 ```{r}
 #Transformando o data.frame em um corpus
@@ -239,7 +312,7 @@ toks <- tokens(corp, remove_punct = T, remove_numbers = T)
 
 ```
 
-* Tokens sem stopword
+-   Tokens sem stopword
 
 ```{r}
 # Removendo as stopwords
@@ -247,10 +320,9 @@ toks_nostop <- tokens_select(toks, pattern = stopwords('pt'),
                              selection = 'remove')
 ```
 
+**2.8 Gerando n-grams**
 
-**Gerando n-grams**
-
-O método de apresentado nâo respeita a ordem em que as palavras foram escritas, no entanto, para algumas análises essa ordem importa. Para garantir essa ordem, podemos criar *tokens* com *N-grams* para garantir que a ordem de palavras esteja presente no processo de *tokenização*. 
+O método apresentado não respeita a ordem em que as palavras foram escritas, no entanto, para algumas análises essa ordem importa. Para garantir essa ordem, podemos criar *tokens* com *N-grams* para garantir que a ordem de palavras esteja presente no processo de *tokenização*.
 
 Através da função *tokens_ngrams()* é possível aplicar esse método.
 
@@ -260,7 +332,7 @@ toks_ngram <- tokens_ngrams(toks, n = 1:4)
 toks_ngram
 ```
 
-**Nuvem de palavras**
+**2.9 Nuvem de palavras**
 
 Uma forma da visualização de frequência na análise de texto é a nuvem de palavras.
 
@@ -274,12 +346,351 @@ set.seed(132)
 textplot_wordcloud(dfmat_texto, max_words = 100)
 ```
 
+**3. Análise exploratória**
+
+Existem diversas análises de dados que podem ser realizadas utilizando dados obtidos por meio de web scraping com o pacote rvest em um portal de notícias.
+
+Vamos iniciar novamente, carregando o nosso banco com os dados obtidos através da web scraping.
+
+```{r}
+library(rvest)
+library(xml2)
+library(dplyr)
+library(knitr)
+dt_noticias <- html_nodes(pagina,xpath=" //h1 |//h2 |//h5")%>%
+html_text2()
+dt_noticias
+
+#dt_titulos <- html_element(pagina,"section")%>%
+#html_text2()
+#dt_titulos
+
+#Realizando a limpeza no texto
+texto <- str_replace_all(dt_noticias,"\\(",")")
+texto <- str_replace_all(dt_noticias, "\\)","")
+texto <- str_replace_all(dt_noticias,"\n","")
+texto <- str_replace_all(dt_noticias,"\t","")
+texto
+
+texto_df <- tibble(line=length(texto), text= texto) %>%
+  kable()
+
+texto_df
+
+```
+
+**3.1 Análise de sentimentos**
+
+A análise dos sentimentos ou a mineração de opinião é utilizada para extrair automaticamente informações sobre a conotação negativa ou positiva da linguagem de um documento. Embora seja uma tarefa que vem sendo utilizada há muito tempo no campo do marketing ou da política, em estudos literários ainda é uma abordagem recente e não há um método único. Além disso, há a possibilidade de extrair a polaridade dos sentimentos e também das emoções.
+
+É importante especificar o que estamos procurando com os termos "sentimento" e "emoções", pois eles são frequentemente usados de forma intercambiável, de modo geral, mas são diferentes.
+
+Embora não haja um acordo final sobre o número de emoções básicas, geralmente são seis: raiva, alegria, repugnância, medo, tristeza e surpresa.
+
+Além disso, no caso do sistema automático que utilizaremos, as emoções secundárias de antecipação e confiança também aparecem.
+
+```{r}
+# Instalar e carregar o pacote rvest
+#install.packages("rvest")
+library(rvest)
+library(xml2)
+# Definir a URL da página de notícias do G1
+url <- "https://www.jornaldaparaiba.com.br/"
+
+# Coletar os títulos e links das notícias
+noticias <- read_html(url) %>%
+  html_nodes(xpath=" //h1 |//h2 |//h5") %>%
+  html_text() %>%
+  data.frame(Título = .) %>%
+  mutate(Link = read_html(url) %>%
+           html_element("a") %>%
+           html_attr("href"))
+
+# Exibir as primeiras linhas do resultado
+head(noticias)
 
 
+```
+
+Nesse código, estamos usando o read_html para carregar o conteúdo HTML da página de notícias do Jornal da Paraíba e, em seguida, o html_nodes e o html_text para coletar os títulos das notícias. Estamos também usando o html_attr para coletar os links das notícias e, por fim, criando um data.frame com os resultados.
+
+**3.2 Coletando informações sobre as noticias mais lidas e seus autores**
+
+Para obter dados sobre as notícias mais lidas e seus autores em um portal de notícias como o Jornal da Paraíba, procedemos dá seguinte forma:
+
+-   Extrair os dados das notícias mais lidas, incluindo o título, o link, o autor e os dados de publicação.
+
+A seguir, temos o código em R que utilizaremos para coletar esses dados:
+
+```{r Results="hide"}
+# Instalar e carregar o pacote rvest
+#install.packages("rvest")
+library(rvest)
+library(xml2)
+library(tidytext)
+
+# Definir a URL da página de notícias mais lidas do G1
+url <- "https://www.jornaldaparaiba.com.br"
+
+# Coletar os títulos, links, autores e datas das notícias mais lidas
+noticias_lidas <- read_html(url) %>%
+  html_nodes(xpath=" //h1 |//h2 |//h5") %>%
+  html_text2() %>%
+  data.frame(Título = .) %>%
+  mutate(Link = read_html(url) %>%
+           html_element("a") %>%
+           html_attr("href"),
+         Autor = read_html(url) %>%
+           html_element(xpath = "//div[2] |//div[1] |//section |//div |/ /h4 |//a") %>%
+           html_text(), 
+         Data = read_html(url) %>%
+          html_element(xpath = "//div[1] |//header |//div[1] |//div[1]") %>%
+           html_text2())
 
 
+noticias_lidas <- str_replace_all(noticias_lidas,"\\(",")")
+noticias_lidas <- str_replace_all(noticias_lidas, "\\)","")
+noticias_lidas <- str_replace_all(noticias_lidas,"\n","")
+noticias_lidas <- str_replace_all(noticias_lidas,"\t","")
+
+# Exibir as primeiras linhas do resultado
+head(noticias_lidas)
+
+```
 
 
+```{r}
+# Instalar e carregar os pacotes rvest e tidytext
+#install.packages(c("rvest", "tidytext"))
+library(rvest)
+library(tidytext)
+library(syuzhet)
 
+# Definir a URL da página de notícias do Jornal da Paraíba
 
+#url <- "https://www.jornaldaparaiba.com.br/"
 
+# Coletar os títulos das notícias
+noticias <- read_html(url) %>%
+  html_nodes(xpath= "//h1 |//h2 |//h5") %>%
+  html_text2()
+
+# Transformar os títulos em um data frame para a análise de sentimentos
+df_noticias <- data.frame(Título = noticias, stringsAsFactors = FALSE)
+
+# Separar cada palavra do título em uma linha
+texto_palavras <- get_tokens(texto)
+head(texto_palavras)
+```
+
+No código acima, estamos coletando os títulos das notícias a partir da página do Jornal da Paraíba e envolvendo-os em um quadro de dados para a análise de sentimentos. Em seguida, estamos utilizando a função get_tokens para separar cada palavra do título em uma linha.
+
+Como a análise que vamos realizar precisa de uma lista, seja de palavras ou de frases (aqui só prestaremos atenção a palavras individuais), precisamos de um passo intermediário entre o carregamento do texto e a extração dos valores de sentimento.
+
+Assim, dividimos o texto (string) em uma lista de palavras (tokens). Isto é muito comum na análise distante de textos.
+
+Agora, podemos visualizar as primeiras seis linhas do nosso token e podemos ver também quantas palavras ou tokens estão neste texto com a função length():
+
+```{r}
+# Carregue os pacotes
+library(syuzhet)
+library(RColorBrewer)
+library(wordcloud)
+library(tm)
+
+head(texto_palavras)
+length(texto_palavras)
+
+```
+
+Para realizar a análise para orações, utilizamos a função get_sentences() e seguimos o mesmo processo:
+
+```{r}
+oracoes_vetor <- get_sentences(noticias)
+length(oracoes_vetor)
+```
+
+**3.3 Extração de dados com o NRC Sentiment Lexiconextração-de-dados-com-o-nrc-sentiment-lexicon**
+
+Agora podemos executar a função get_nrc_sentiment para obter os sentimentos contido nos títulos.
+
+Como a função executa por padrão o vocabulário inglês, nós a escrevemos com o argumento "lang" (de language, ou idioma) para usar o vocabulário português ("portuguese"). Por sua vez, criamos um novo objeto para armazenar os dados extraídos. Este será um objeto do tipo data frame. Esta função procura a presença das oito emoções e dos dois sentimentos para cada palavra em nosso vetor, e atribui um número maior que 0 se elas existirem.
+
+```{r message=FALSE,warning=FALSE}
+sentimentos_df <- get_nrc_sentiment(texto_palavras, lang="portuguese")
+```
+
+Podemos ler os resultados no novo objeto, simplesmente selecionando o objeto e executando-o. Mas para evitar "imprimir" milhares de linhas no console, também podemos usar a função head() para ver os primeiros seis tokens. No caso do texto que estamos usando, quando executarmos essa função, devemos ver o seguinte, que não é nada interessante:
+
+```{r}
+head(sentimentos_df)
+```
+
+**3.4 Resumo do texto**
+
+O que é interessante é ver um resumo de cada um dos valores que obtivemos utilizando a função geral summary(). Isto pode ser muito útil ao comparar vários textos, pois permite ver diferentes medidas, tais como a média dos resultados para cada uma das emoções e os dois sentimentos.
+
+```{r}
+summary(sentimentos_df)
+```
+
+Nesse nosso exemplo, podemos ver um equilíbrio, em média (mean), entre o positivo (0,05517) e o negativo (0,05517). Mas se olharmos para as emoções, parece que a tristeza (0,02759) aparece em mais momentos do que a alegria (0,02069). Vários dos valores fornecidos pela função de resumo do texto aparecem com um valor igual a 0, incluindo a mediana (median). Isto indica que poucas palavras do texto aparecem no dicionário que estamos usando (NRC) ou, inversamente, que poucas têm uma atribuição de sentimento ou emoção no dicionário.
+
+**3.5 Análise das emoções em um texto**
+
+-   Gráfico de barras
+
+Para ver quais as emoções que estão mais presentes no texto, a maneira mais simples é criar um barplot. Para isso, usamos a função barplot() com o resumo das colunas 1 a 8, ou seja, as colunas de raiva (anger), antecipação (antecipation), desgosto (disgust), medo (fear), alegria (joy), tristeza (sadness), surpresa (surprise) e confiança (trust). Os resultados obtidos vêm do processamento da função prop.table() dos resultados das oito colunas com cada uma das palavras da tabela.
+
+```{r}
+barplot(
+colSums(prop.table(sentimentos_df[, 1:8])),
+space = 0.2,
+horiz = FALSE,
+las = 1,
+cex.names = 0.7,
+col = brewer.pal(n = 8, name = "Set3"),
+main = "Análise de sentimentos",
+sub = "Análise utilizando web scraping",
+xlab="emoções", ylab = NULL, cex.axis = 0.5)
+```
+
+A análise do gráfico indicam que a emoção de medo (fear) e antecipação (antecipation) prevalecem mais do que os demais sentimentos. Mas quais são as palavras usadas no texto que indicam "medo"? Com que frequência ela aparece?
+
+**3.6 Contando o número de palavras com cada emoção**.
+
+A fim de realizar uma análise do texto, é muito interessante saber quais são as palavras usadas com mais frequência no texto em relação à sua identificação com cada emoção. Para isso, primeiro temos que criar um objeto de caracteres com todas as palavras que tenham um valor maior que 0 na coluna "medo" (fear).
+
+```{r}
+palavras_medo <- texto_palavras[sentimentos_df$fear > 0]
+palavras_medo
+```
+
+O conteúdo de palavras_medo nos indica que esta lista não diz muito, pois retorna apenas a listagem de palavras sem maiores informações. Para obter a contagem das vezes que cada palavra relacionada à tristeza aparece nos títulos, geramos uma tabela do primeiro conjunto de caracteres com as funções unlist e table, que depois ordenamos em ordem decrescente (se quisermos uma ordem ascendente mudamos TRUE para FALSE); criamos um novo objeto de tipo tabela e imprimimos as primeiras 10 palavras da lista com sua frequência:
+
+```{r}
+palavras_medo_ordem <- sort(table(unlist(palavras_medo)), decreasing = TRUE)
+head(palavras_medo_ordem, n = 10)
+```
+
+Se quisermos saber quantas palavras únicas foram relacionadas à medo, basta usar a função length no objeto que agora agrupa as palavras em ordem:
+
+```{r}
+length(palavras_medo_ordem)
+```
+
+Podemos repetir a mesma operação com o resto das emoções ou com aquela que nos interessa, assim como com os sentimentos positivos e negativos.
+
+**3.7 Nuvem de emoções**
+
+A fim de gerar uma nuvem com as palavras que correspondem a cada emoção em títulos, criaremos primeiro um vetor no qual armazenaremos todas as palavras que, nas colunas que indicamos após o símbolo \$, têm um valor maior que 0. É gerado um novo objeto do tipo vetor, que contém um elemento para a lista de cada emoção.
+
+Neste caso, devemos indicar novamente à função que temos caracteres acentuados.
+
+```{r}
+nuvem_emocoes_vetor <- c(
+paste(texto_palavras[sentimentos_df$sadness> 0], collapse = " "),
+paste(texto_palavras[sentimentos_df$joy > 0], collapse = " "),
+paste(texto_palavras[sentimentos_df$anger > 0], collapse = " "),
+paste(texto_palavras[sentimentos_df$fear > 0], collapse = " "))
+```
+
+Uma vez gerado o vetor, deve convertê-lo em caracteres UTF-8 utilizando a função iconv.
+
+```{r}
+nuvem_emocoes_vetor <- iconv(nuvem_emocoes_vetor, "latin1", "UTF-8")
+```
+
+Agora que temos o vetor, criamos um corpus de palavras com quatro "documentos" para a nuvem:
+
+```{r}
+nuvem_corpus <- Corpus(VectorSource(nuvem_emocoes_vetor))
+```
+
+Em seguida, transformamos este corpus em uma matriz termo-documento com a função TermDocumentMatrix(). Com isto, agora usamos a função as.matrix() para converter o TDM em uma matriz que, como podemos ver, lista os termos no texto com um valor maior que zero para cada uma das quatro emoções que extraímos aqui. Para ver o início desta informação, use novamente a função head:
+
+```{r}
+nuvem_tdm <- TermDocumentMatrix(nuvem_corpus)
+nuvem_tdm <- as.matrix(nuvem_tdm)
+head(nuvem_tdm)
+```
+
+Agora, atribuímos um nome a cada um dos grupos de palavras ou documentos (Docs) em nossa matriz. Usaremos os termos em português para as colunas que selecionamos para exibir na nuvem.
+
+Mais uma vez, podemos ver a mudança feita ao executar a função head.
+
+```{r}
+colnames(nuvem_tdm) <- c('tristeza', 'felicidade', 'raiva', 'confiança')
+head(nuvem_tdm)
+```
+
+Podemos visualizar a nuvem de palavras que estamos acostumados a ver na mídia ou em estudos académicos. O tamanho e a localização da palavra correspondem à sua maior ou menor ocorrência com valor emocional atribuído no texto. Primeiro, executamos a função set.seed() para que quando reproduzirmos o resultado visual seja o mesmo que o nosso (se não o fizer, será o mesmo, mas as palavras aparecerão em posições diferentes). E, para gerar a nuvem, vamos usar a *função comparison.cloud* do *pacote wordcloud*.
+
+Indicamos o objeto a representar, aqui 'nuvem_tdm', indicamos uma ordem não aleatória das palavras, atribuímos uma cor para cada grupo de palavras e damos tamanhos ao título e à escala geral, e atribuímos um número máximo de termos que serão exibidos.
+
+```{r}
+library(quanteda.textplots)
+#criando uma DFM com as hashtags
+dfmat_texto <- dfm(texto_palavras)
+set.seed(132)
+textplot_wordcloud(dfmat_texto, max_words = 100, colors = c("green", "red", "orange", "blue"))
+```
+
+O resultado da nuvem ficou com poucas palavras, isso foi motivado pelo tamanho do nosso texto ser pequeno, já que estamos utilizando os títulos das manchetes do portal.
+
+**3.8 Visualizando a evolução dos sentimentos em um texto**
+
+Para complementar a leitura isolada das emoções, estudando a flutuação dos sentimentos positivos e negativos ao longo de um texto, há uma maneira de normalizar e visualizar estas informações. Como a análise da função de extração de sentimento atribui um valor positivo tanto ao sentimento positivo quanto ao negativo, precisamos gerar dados entre um intervalo de -1 para o momento mais negativo e 1 para o mais positivo, e onde 0 é neutro. Para isso, calculamos a valência do texto multiplicando os valores na coluna de valores negativos de nosso data frame com os resultados por -1 e adicionamos o valor na coluna de valores positivos.
+
+```{r}
+sentimentos_valencia <- (sentimentos_df$negative * -1) + sentimentos_df$positive
+sentimentos_valencia
+```
+
+Finalmente, podemos gerar um gráfico com a função simple_plot() integrada no pacote syuzhet, que nos dará duas imagens diferentes; a primeira, tem todas as medidas que o algoritmo calcula e, a segunda, é uma normalização das mesmas. O eixo horizontal apresenta o texto em 100 fragmentos normalizados e o eixo vertical nos informa sobre a valência do sentimento no texto.
+
+Dependendo das características de seu computador, este gráfico pode levar até 20-30 minutos para ser gerado.
+
+```{r}
+simple_plot(sentimentos_valencia)
+```
+
+Assim, neste caso, podemos interpretar que o texto analisado varia entre momentos positivos e negativos.
+
+Começa de forma mais positiva, seguido e permanecendo por um momento negativo.
+
+**3.9 Salvar seus dados**
+
+Para salvar os dados para retornar a eles mais tarde, é possível fazê-lo em um ficheiro de valores separados por vírgula (CSV) com a função write.csv(). Aqui dizemos para salvar o data frame, que contém o resultado das oito emoções e os dois sentimentos de texto em um ficheiro com uma extensão .csv. Além disso, podemos acrescentar a palavra à qual cada linha de resultados corresponde, em uma coluna à esquerda usando a palavra vetor feita no início da análise.
+
+```{r}
+write.csv(sentimentos_df, file = "analise_sent_titulos.csv", row.names = texto_palavras)
+```
+
+**4. Conclusão**
+
+Como os dados obtidos através da técnica de raspagem de dados *web scraping* se limitou aos títulos das principais notícias do portal do Jornal da Paraíba, nossas análises se limitaram as análises dos textos obtidos que, por serem pequenos, ocasionaram resultados simples.
+
+Porém, o estudo demonstra que a técnica de *web scraping* é uma ferramenta poderosa para a obtenção de dados oriundos da internet.
+
+Para Bruce e Bruce (2019), um dos maiores desafios da ciência de dados é trabalhar essa torrent de dados brutos, transformá-la para aplicar os conceitos estatístico e assim obter informações acionável.
+
+**5. Trabalhos futuros**
+
+Como propostas de trabalhos futuros, podemos destacar a coleta, limpeza e a análise de dados de outros sites através da técnica de *web scraping* bem como explorar outras ferramentas como utilizando o pacote *Rselenium* do R.
+
+**Referências**
+
+BRUCE, Peter; BRUCE, Andrew. Estatística Prática para Cientistas de Dados: 50 conceitos essenciais. Rio de Janeiro: Alta Books, 2019. 300 p.
+
+LIMA, Acervo. Web Scraping usando a linguagem R. 2022. Disponível em: <https://acervolima.com/web-scraping-usando-a-lingugem-r/>. Acesso em: 01 abr. 2023.
+
+MITCHELL, Ryan. Web Scraping com Python: coletando mais dados na web moderna. 2. ed. São Paulo: Oreille Novatec, 2019.
+
+MOREIRA, Davi; ROCABADO, Mônica. Texto como Dado para Ciências Sociais: guia prático com aplicações. guia prático com aplicações. 2022. Disponível em: <https://bookdown.org/davi_moreira/txt4cs/>. Acesso em: 14 abr. 2023.
+
+SILVA, Réulison. Web Scraping com Python: uma maneira de extrair dados da web. Uma maneira de extrair dados da web. 2021. Disponível em: <https://reulison.com.br/web-scraping-python/>. Acesso em: 28 jan. 2023.
+
+Anexo
+
+<https://github.com/carlostvcb-ux/Web_Scraping_Inicio>
