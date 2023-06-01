@@ -1,0 +1,1217 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.25)  9 MAY 2023 19:27
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**modelo_inicial_scraping.tex
+(./modelo_inicial_scraping.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-02-22> (/usr/local/texlive/2023/texmf-dist/tex/latex
+/base/article.cls
+Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2022/04/08 v2.17n AMS math features
+\@mathmargin=\skip50
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen141
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen142
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count193
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count194
+\leftroot@=\count195
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count196
+\DOTSCASE@=\count197
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen143
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count198
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count199
+\dotsspace@=\muskip16
+\c@parentequation=\count266
+\dspbrk@lvl=\count267
+\tag@help=\toks17
+\row@=\count268
+\column@=\count269
+\maxfields@=\count270
+\andhelp@=\toks18
+\eqnshift@=\dimen144
+\alignsep@=\dimen145
+\tagshift@=\dimen146
+\tagwidth@=\dimen147
+\totwidth@=\dimen148
+\lineht@=\dimen149
+\@envbody=\toks19
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/lmodern.sty
+Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
+2.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks21
+\inpenc@posthook=\toks22
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2023/03/13 v3.1a Micro-typographical refinements (RS)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks23
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count271
+)
+\MT@toks=\toks24
+\MT@tempbox=\box53
+\MT@count=\count272
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1059.
+LaTeX Info: Redefining \leftprotrusion on input line 1060.
+\MT@prot@toks=\toks25
+LaTeX Info: Redefining \rightprotrusion on input line 1078.
+LaTeX Info: Redefining \textls on input line 1368.
+\MT@outer@kern=\dimen150
+LaTeX Info: Redefining \textmicrotypecontext on input line 1988.
+\MT@listname@count=\count273
+(/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+File: microtype-pdftex.def 2023/03/13 v3.1a Definitions specific to pdftex (RS)
+
+LaTeX Info: Redefining \lsstyle on input line 902.
+LaTeX Info: Redefining \lslig on input line 902.
+\MT@outer@space=\skip53
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2023/03/13 v3.1a microtype main configuration file (RS)
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/parskip/parskip.sty
+Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
+(/usr/local/texlive/2023/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+))) (/usr/local/texlive/2023/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+(/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count274
+\Gm@cntv=\count275
+\c@Gm@tempcnt=\count276
+\Gm@bindingoffset=\dimen151
+\Gm@wd@mp=\dimen152
+\Gm@odd@mp=\dimen153
+\Gm@even@mp=\dimen154
+\Gm@layoutwidth=\dimen155
+\Gm@layoutheight=\dimen156
+\Gm@layouthoffset=\dimen157
+\Gm@layoutvoffset=\dimen158
+\Gm@dimlist=\toks26
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2023/01/19 4.5a verbatim text (tvz,hv)
+\FV@CodeLineNo=\count277
+\FV@InFile=\read2
+\FV@TabBox=\box54
+\c@FancyVerbLine=\count278
+\FV@StepNumber=\count279
+\FV@OutFile=\write3
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip54
+\fb@frw=\dimen159
+\fb@frh=\dimen160
+\FrameRule=\dimen161
+\FrameSep=\dimen162
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
+\LTleft=\skip55
+\LTright=\skip56
+\LTpre=\skip57
+\LTpost=\skip58
+\LTchunksize=\count280
+\LTcapwidth=\dimen163
+\LT@head=\box55
+\LT@firsthead=\box56
+\LT@foot=\box57
+\LT@lastfoot=\box58
+\LT@gbox=\box59
+\LT@cols=\count281
+\LT@rows=\count282
+\c@LT@tables=\count283
+\c@LT@chunks=\count284
+\LT@p@ftn=\toks27
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen164
+\lightrulewidth=\dimen165
+\cmidrulewidth=\dimen166
+\belowrulesep=\dimen167
+\belowbottomsep=\dimen168
+\aboverulesep=\dimen169
+\abovetopsep=\dimen170
+\cmidrulesep=\dimen171
+\cmidrulekern=\dimen172
+\defaultaddspace=\dimen173
+\@cmidla=\count285
+\@cmidlb=\count286
+\@aboverulesep=\dimen174
+\@belowrulesep=\dimen175
+\@thisruleclass=\count287
+\@lastruleclass=\count288
+\@thisrulewidth=\dimen176
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/array.sty
+Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen177
+\ar@mcellbox=\box60
+\extrarowheight=\dimen178
+\NC@list=\toks28
+\extratabsurround=\skip59
+\backup@length=\skip60
+\ar@cellbox=\box61
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count289
+\calc@Bcount=\count290
+\calc@Adimen=\dimen179
+\calc@Bdimen=\dimen180
+\calc@Askip=\skip61
+\calc@Bskip=\skip62
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count291
+\calc@Cskip=\skip63
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/footnotehyper/footnotehyper.sty
+Package: footnotehyper 2021/08/13 v1.1e hyperref aware footnote.sty (JFB)
+\FNH@notes=\box62
+\FNH@width=\dimen181
+\FNH@toks=\toks29
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+)
+\Gin@req@height=\dimen182
+\Gin@req@width=\dimen183
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/bookmark/bookmark.sty
+Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2023-02-07 v7.00v Hypertext links for LaTeX
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
+(/usr/local/texlive/2023/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count292
+)
+\@linkdim=\dimen184
+\Hy@linkcounter=\count293
+\Hy@pagecounter=\count294
+(/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2023-02-07 v7.00v Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count295
+(/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2023-02-07 v7.00v Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `unicode' set `true' on input line 4060.
+Package hyperref Info: Hyper figures OFF on input line 4177.
+Package hyperref Info: Link nesting OFF on input line 4182.
+Package hyperref Info: Hyper index ON on input line 4185.
+Package hyperref Info: Plain pages OFF on input line 4192.
+Package hyperref Info: Backreferencing OFF on input line 4197.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4425.
+\c@Hy@tempcnt=\count296
+(/usr/local/texlive/2023/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4763.
+\XeTeXLinkMargin=\dimen185
+(/usr/local/texlive/2023/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count297
+\Field@Width=\dimen186
+\Fld@charsize=\dimen187
+Package hyperref Info: Hyper figures OFF on input line 6042.
+Package hyperref Info: Link nesting OFF on input line 6047.
+Package hyperref Info: Hyper index ON on input line 6050.
+Package hyperref Info: backreferencing OFF on input line 6057.
+Package hyperref Info: Link coloring OFF on input line 6062.
+Package hyperref Info: Link coloring with OCG OFF on input line 6067.
+Package hyperref Info: PDF/A mode OFF on input line 6072.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count298
+\c@Item=\count299
+\c@Hfootnote=\count300
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2023-02-07 v7.00v Hyperref driver for pdfTeX
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\Fld@listcount=\count301
+\c@bookmark@seq@number=\count302
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+)
+\Hy@SectionHShift=\skip64
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
+File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
+\BKM@id=\count303
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/xurl/xurl.sty
+Package: xurl 2022/01/09 v 0.10 modify URL breaks
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count304
+\l__pdf_internal_box=\box63
+)
+No file modelo_inicial_scraping.aux.
+\openout1 = `modelo_inicial_scraping.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Info: Redefining \microtypecontext on input line 120.
+Package microtype Info: Applying patch `item' on input line 120.
+Package microtype Info: Applying patch `toc' on input line 120.
+Package microtype Info: Applying patch `eqnum' on input line 120.
+Package microtype Info: Applying patch `footnote' on input line 120.
+Package microtype Info: Applying patch `verbatim' on input line 120.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using protrusion set `basicmath'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `alltext-nott'.
+LaTeX Info: Redefining \showhyphens on input line 120.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+) (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count305
+\scratchdimen=\dimen188
+\scratchbox=\box64
+\nofMPsegments=\count306
+\nofMParguments=\count307
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count308
+\MPscratchDim=\dimen189
+\MPnumerator=\count309
+\makeMPintoPDFobject=\count310
+\everyMPtoPDFconversion=\toks31
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package hyperref Info: Link coloring OFF on input line 120.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
+22.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
+22.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+122.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+122.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 122.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 122.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 122.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 122
+.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 122
+.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
+49.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [1
+
+{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
+al/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/202
+3/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
+65.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [2] [3]
+Overfull \hbox (212.743pt too wide) in paragraph at lines 691--691
+[]\T1/lmtt/m/n/10 ##                                             Confira 15 açõ
+es que a prefeitura de João Pessoa prevê para `recuperação' do Centro[] 
+ []
+
+
+Overfull \hbox (160.24315pt too wide) in paragraph at lines 691--691
+[]\T1/lmtt/m/n/10 ##                                             Rita Lee, minh
+a adorável Rita Lee, quando escurece, eu levo o seu coração[] 
+ []
+
+
+Overfull \hbox (133.99323pt too wide) in paragraph at lines 691--691
+[]\T1/lmtt/m/n/10 ##                                             Câncer de pulm
+ão: entenda doença com a qual Rita Lee foi diagnostica[] 
+ []
+
+
+Overfull \hbox (76.2434pt too wide) in paragraph at lines 691--691
+[]\T1/lmtt/m/n/10 ##                                         América-RN x Botaf
+ogo-PB: onde assistir, horário e escalações[] 
+ []
+
+
+Overfull \hbox (207.49301pt too wide) in paragraph at lines 691--691
+[]\T1/lmtt/m/n/10 ##                                         Rita Lee apelidou 
+o próprio tumor de `Jair' (Bolsonaro) e deixou profecia para velório[] 
+ []
+
+[4]
+Overfull \hbox (55.24345pt too wide) in paragraph at lines 691--691
+[]\T1/lmtt/m/n/10 ##                                         Edital da Prefeitu
+ra de Pocinhos tem 89 vagas temporárias[] 
+ []
+
+
+Overfull \hbox (212.743pt too wide) in paragraph at lines 691--691
+[]\T1/lmtt/m/n/10 ##                                         Nino Paraíba é cit
+ado em investigação por supostamente participar de esquema de apostas[] 
+ []
+
+
+Overfull \hbox (76.2434pt too wide) in paragraph at lines 691--691
+[]\T1/lmtt/m/n/10 ##                                         América-RN x Botaf
+ogo-PB: onde assistir, horário e escalações[] 
+ []
+
+
+Overfull \hbox (207.49301pt too wide) in paragraph at lines 691--691
+[]\T1/lmtt/m/n/10 ##                                         Rita Lee apelidou 
+o próprio tumor de `Jair' (Bolsonaro) e deixou profecia para velório[] 
+ []
+
+
+Overfull \hbox (55.24345pt too wide) in paragraph at lines 691--691
+[]\T1/lmtt/m/n/10 ##                                         Edital da Prefeitu
+ra de Pocinhos tem 89 vagas temporárias[] 
+ []
+
+
+Overfull \hbox (212.743pt too wide) in paragraph at lines 691--691
+[]\T1/lmtt/m/n/10 ##                                         Nino Paraíba é cit
+ado em investigação por supostamente participar de esquema de apostas[] 
+ []
+
+[5]
+Overfull \hbox (70.99341pt too wide) in paragraph at lines 691--691
+[]\T1/lmtt/m/n/10 ##                                             Série C 2023: 
+onde assistir, regulamento e classificação[] 
+ []
+
+
+Overfull \hbox (81.49338pt too wide) in paragraph at lines 691--691
+[]\T1/lmtt/m/n/10 ##                      Rafael Thyere fala sobre a sua fase n
+o Sport e analisa futebol de base na Paraíba[] 
+ []
+
+
+Overfull \hbox (228.49295pt too wide) in paragraph at lines 691--691
+[]\T1/lmtt/m/n/10 ##                                             Caso Braiscomp
+any: defesa adota estratégia `insana' ao postergar apresentação de casal[] 
+ []
+
+
+Overfull \hbox (427.99237pt too wide) in paragraph at lines 691--691
+[]\T1/lmtt/m/n/10 ##                                             A retomada do 
+turismo no Cariri: produções cinematográficas e fim da pandemia movimentam empr
+eendedores na Roliúde Paraibana[] 
+ []
+
+
+Overfull \hbox (223.24297pt too wide) in paragraph at lines 691--691
+[]\T1/lmtt/m/n/10 ##                                             Boa Ventura, n
+o Sertão da PB, escolhe vereadores em eleição suplementar; veja eleitos[] 
+ []
+
+[6]
+Overfull \hbox (170.74312pt too wide) in paragraph at lines 691--691
+[]\T1/lmtt/m/n/10 ##                                             Vanessa da Mat
+a faz show dia 20 em João Pessoa com samba novo no repertório[] 
+ []
+
+
+Overfull \hbox (70.99341pt too wide) in paragraph at lines 691--691
+[]\T1/lmtt/m/n/10 ##                                             Série C 2023: 
+onde assistir, regulamento e classificação[] 
+ []
+
+
+Overfull \hbox (81.49338pt too wide) in paragraph at lines 691--691
+[]\T1/lmtt/m/n/10 ##                      Rafael Thyere fala sobre a sua fase n
+o Sport e analisa futebol de base na Paraíba[] 
+ []
+
+
+Overfull \hbox (118.24327pt too wide) in paragraph at lines 691--691
+[]\T1/lmtt/m/n/10 ##                      Veja onde se vacinar contra Covid-19 
+e influenza em João Pessoa, nesta quarta-feira (10)[] 
+ []
+
+[7]
+Overfull \hbox (2.7436pt too wide) in paragraph at lines 691--691
+[]\T1/lmtt/m/n/10 ##                      Governo esclarece que Lula não estará
+ na Paraíba no próximo sábado[] 
+ []
+
+
+Overfull \hbox (165.49313pt too wide) in paragraph at lines 691--691
+[]\T1/lmtt/m/n/10 ##                      Lula não participará de plenária do P
+PA em João Pessoa; confira nota da Secretaria da Presidência[] 
+ []
+
+
+Overfull \hbox (128.74324pt too wide) in paragraph at lines 691--691
+[]\T1/lmtt/m/n/10 ##                      Chico César sobre Rita Lee: `como pad
+roeira da liberdade é um guia para todas as mulheres'[] 
+ []
+
+
+Overfull \hbox (207.49301pt too wide) in paragraph at lines 691--691
+[]\T1/lmtt/m/n/10 ##                      Sem Lula, mas com ministros, governo 
+federal realiza plenária do PPA nacional em João Pessoa neste sábado[] 
+ []
+
+[8]
+Overfull \hbox (81.49338pt too wide) in paragraph at lines 691--691
+[]\T1/lmtt/m/n/10 ##                          Fatos políticos de forma clara e 
+opinativa. Angélica Nunes e Laerte Cerqueira[] 
+ []
+
+
+Overfull \hbox (233.74294pt too wide) in paragraph at lines 691--691
+[]\T1/lmtt/m/n/10 ##                          Notícias da cobertura política de
+ Campina Grande e de todo o interior da Paraíba, por João Paulo Medeiros.[] 
+ []
+
+
+Overfull \hbox (438.49234pt too wide) in paragraph at lines 691--691
+[]\T1/lmtt/m/n/10 ##                          Fabi e Miguel Cavalcanti abordam 
+comportamento e saúde dos pets. Dicas, curiosidades, tutoria responsável e harm
+onização entre animais e família.[] 
+ []
+
+
+Overfull \hbox (270.49283pt too wide) in paragraph at lines 691--691
+[]\T1/lmtt/m/n/10 ##                          Muita cultura e uma pitada de ent
+retenimento, com abordagem de obras e questões relevantes da música e do cinema
+.[] 
+ []
+
+
+Overfull \hbox (86.74336pt too wide) in paragraph at lines 691--691
+[]\T1/lmtt/m/n/10 ##                          Dicas e orientações para cuidar d
+a saúde e bem estar com o médico André Telis.[] 
+ []
+
+[9]
+Overfull \hbox (1472.73933pt too wide) in paragraph at lines 811--811
+[]\T1/lmtt/m/n/10 ##  [1] "                                                    
+                                                                        Convers
+a Política                                            Confira 15 ações que a pr
+efeitura de João Pessoa prevê para `recuperação' do Centro                     
+                   09/05/2023 03:07                                    "[] 
+ []
+
+
+Overfull \hbox (1183.99017pt too wide) in paragraph at lines 811--811
+[]\T1/lmtt/m/n/10 ##  [2] "                                                    
+                                Silvio Osias                                   
+         Rita Lee, minha adorável Rita Lee, quando escurece, eu levo o seu cora
+ção                                        09/05/2023 02:01                    
+                "[] 
+ []
+
+
+Overfull \hbox (1120.99036pt too wide) in paragraph at lines 811--811
+[]\T1/lmtt/m/n/10 ##  [3] "                                                    
+                                Saúde                                          
+  Câncer de pulmão: entenda doença com a qual Rita Lee foi diagnostica         
+                               09/05/2023 05:06                                
+    "[] 
+ []
+
+
+Overfull \hbox (1015.99066pt too wide) in paragraph at lines 811--811
+[]\T1/lmtt/m/n/10 ##  [4] "                                                    
+                                                            Esportes           
+                             Dicas do Cartola FC, rodada #5: quem escalar?     
+                                                               "[] 
+ []
+
+
+Overfull \hbox (910.99097pt too wide) in paragraph at lines 811--811
+[]\T1/lmtt/m/n/10 ##  [5] "                                                    
+                        Esportes                                        América
+-RN x Botafogo-PB: onde assistir, horário e escalações                         
+                                           "[] 
+ []
+
+
+Overfull \hbox (1267.98993pt too wide) in paragraph at lines 811--811
+[]\T1/lmtt/m/n/10 ##  [6] "                                                    
+                                                            Conversa Política  
+                                      Rita Lee apelidou o próprio tumor de `Jai
+r' Bolsonaro e deixou profecia para velório                                    
+                                "[] 
+ []
+
+
+Overfull \hbox (947.74086pt too wide) in paragraph at lines 811--811
+[]\T1/lmtt/m/n/10 ##  [7] "                                                    
+                        Concursos e Emprego                                    
+    Edital da Prefeitura de Pocinhos tem 89 vagas temporárias                  
+                                                  "[] 
+ []
+
+
+Overfull \hbox (1236.49002pt too wide) in paragraph at lines 811--811
+[]\T1/lmtt/m/n/10 ##  [8] "                                                    
+                                                            Esportes           
+                             Nino Paraíba é citado em investigação por supostam
+ente participar de esquema de apostas                                          
+                          "[] 
+ []
+
+
+Overfull \hbox (1099.99042pt too wide) in paragraph at lines 811--811
+[]\T1/lmtt/m/n/10 ##  [9] "                                                    
+                                                            Esportes           
+                             Dicas do Cartola FC, rodada #5: quem escalar?     
+                               09/05/2023 03:18                                
+"[] 
+ []
+
+
+Overfull \hbox (994.99072pt too wide) in paragraph at lines 811--811
+[]\T1/lmtt/m/n/10 ## [10] "                                                    
+                        Esportes                                        América
+-RN x Botafogo-PB: onde assistir, horário e escalações                         
+           09/05/2023 08:12                                "[] 
+ []
+
+
+Overfull \hbox (1351.98969pt too wide) in paragraph at lines 811--811
+[]\T1/lmtt/m/n/10 ## [11] "                                                    
+                                                            Conversa Política  
+                                      Rita Lee apelidou o próprio tumor de `Jai
+r' Bolsonaro e deixou profecia para velório                                    
+09/05/2023 12:16                                "[] 
+ []
+
+
+Overfull \hbox (1031.74062pt too wide) in paragraph at lines 811--811
+[]\T1/lmtt/m/n/10 ## [12] "                                                    
+                        Concursos e Emprego                                    
+    Edital da Prefeitura de Pocinhos tem 89 vagas temporárias                  
+                  09/05/2023 04:26                                "[] 
+ []
+
+
+Overfull \hbox (1320.48978pt too wide) in paragraph at lines 811--811
+[]\T1/lmtt/m/n/10 ## [13] "                                                    
+                                                            Esportes           
+                             Nino Paraíba é citado em investigação por supostam
+ente participar de esquema de apostas                                    09/05/
+2023 06:41                                "[] 
+ []
+
+
+Overfull \hbox (2018.73775pt too wide) in paragraph at lines 811--811
+[]\T1/lmtt/m/n/10 ## [14] "                                                    
+                                                                               
+                                                                               
+          Esportes                                                             
+                           Série C 2023: onde assistir, regulamento e classific
+ação                                        09/07/2021 05:33                   
+                 "[] 
+ []
+
+
+Overfull \hbox (417.4924pt too wide) in paragraph at lines 811--811
+[]\T1/lmtt/m/n/10 ## [15] "                                            Conversa
+ Política            Morte de Rita Lee: Lula decreta luto oficial por três dias
+09/05/2023 06:50            "[] 
+ []
+
+
+Overfull \hbox (490.99219pt too wide) in paragraph at lines 811--811
+[]\T1/lmtt/m/n/10 ## [16] "                                            Esportes
+            Rafael Thyere fala sobre a sua fase no Sport e analisa futebol de b
+ase na Paraíba09/05/2023 06:06            "[] 
+ []
+
+
+Overfull \hbox (322.99268pt too wide) in paragraph at lines 811--811
+[]\T1/lmtt/m/n/10 ## [17] "                                            Comunida
+de            Caso Eloá: quem é e onde está Lindemberg Alves?09/05/2023 06:03  
+          "[] 
+ []
+
+
+Overfull \hbox (1456.98938pt too wide) in paragraph at lines 811--811
+[]\T1/lmtt/m/n/10 ## [19] "                                                    
+                                                                        Pleno P
+oder                                            Caso Braiscompany: defesa adota
+ estratégia `insana' ao postergar apresentação de casal                        
+                08/05/2023 05:30                                    "[] 
+ []
+
+[10]
+Overfull \hbox (1703.73866pt too wide) in paragraph at lines 811--811
+[]\T1/lmtt/m/n/10 ## [20] "                                                    
+                                                                        Mercado
+ em Movimento                                            A retomada do turismo 
+no Cariri: produções cinematográficas e fim da pandemia movimentam empreendedor
+es na Roliúde Paraibana                                        08/05/2023 11:15
+                                    "[] 
+ []
+
+
+Overfull \hbox (1483.2393pt too wide) in paragraph at lines 811--811
+[]\T1/lmtt/m/n/10 ## [21] "                                                    
+                                                                        Convers
+a Política                                            Boa Ventura, no Sertão da
+ PB, escolhe vereadores em eleição suplementar; veja eleitos                   
+                     08/05/2023 06:55                                    "[] 
+ []
+
+
+Overfull \hbox (1404.48953pt too wide) in paragraph at lines 811--811
+[]\T1/lmtt/m/n/10 ## [22] "                                                    
+                                                                        Silvio 
+Osias                                            Vanessa da Mata faz show dia 2
+0 em João Pessoa com samba novo no repertório                                  
+      08/05/2023 08:27                                    "[] 
+ []
+
+
+Overfull \hbox (2018.73775pt too wide) in paragraph at lines 811--811
+[]\T1/lmtt/m/n/10 ## [23] "                                                    
+                                                                               
+                                                                               
+          Esportes                                                             
+                           Série C 2023: onde assistir, regulamento e classific
+ação                                        09/07/2021 05:33                   
+                 "[] 
+ []
+
+
+Overfull \hbox (417.4924pt too wide) in paragraph at lines 811--811
+[]\T1/lmtt/m/n/10 ## [24] "                                            Conversa
+ Política            Morte de Rita Lee: Lula decreta luto oficial por três dias
+09/05/2023 06:50            "[] 
+ []
+
+
+Overfull \hbox (490.99219pt too wide) in paragraph at lines 811--811
+[]\T1/lmtt/m/n/10 ## [25] "                                            Esportes
+            Rafael Thyere fala sobre a sua fase no Sport e analisa futebol de b
+ase na Paraíba09/05/2023 06:06            "[] 
+ []
+
+
+Overfull \hbox (322.99268pt too wide) in paragraph at lines 811--811
+[]\T1/lmtt/m/n/10 ## [26] "                                            Comunida
+de            Caso Eloá: quem é e onde está Lindemberg Alves?09/05/2023 06:03  
+          "[] 
+ []
+
+
+Overfull \hbox (501.49216pt too wide) in paragraph at lines 811--811
+[]\T1/lmtt/m/n/10 ## [27] "                                            Saúde   
+         Veja onde se vacinar contra Covid-19 e influenza em João Pessoa, nesta
+ quarta-feira 1009/05/2023 05:46            "[] 
+ []
+
+
+Overfull \hbox (427.99237pt too wide) in paragraph at lines 811--811
+[]\T1/lmtt/m/n/10 ## [28] "                                            Pleno Po
+der            Governo esclarece que Lula não estará na Paraíba no próximo sába
+do09/05/2023 04:56            "[] 
+ []
+
+
+Overfull \hbox (417.4924pt too wide) in paragraph at lines 811--811
+[]\T1/lmtt/m/n/10 ## [29] "                                            Tecnolog
+ia            Telegram envia mensagens aos usuários criticando PL das Fake News
+09/05/2023 04:56            "[] 
+ []
+
+
+Overfull \hbox (622.2418pt too wide) in paragraph at lines 811--811
+[]\T1/lmtt/m/n/10 ## [30] "                                            Conversa
+ Política            Lula não participará de plenária do PPA em João Pessoa; co
+nfira nota da Secretaria da Presidência09/05/2023 04:50            "[] 
+ []
+
+
+Overfull \hbox (532.99207pt too wide) in paragraph at lines 811--811
+[]\T1/lmtt/m/n/10 ## [31] "                                            Cultura 
+           Chico César sobre Rita Lee: `como padroeira da liberdade é um guia p
+ara todas as mulheres'09/05/2023 04:48            "[] 
+ []
+
+
+Overfull \hbox (664.24168pt too wide) in paragraph at lines 811--811
+[]\T1/lmtt/m/n/10 ## [32] "                                            Conversa
+ Política            Sem Lula, mas com ministros, governo federal realiza plená
+ria do PPA nacional em João Pessoa neste sábado09/05/2023 04:33            "[] 
+
+ []
+
+
+Overfull \hbox (338.74263pt too wide) in paragraph at lines 811--811
+[]\T1/lmtt/m/n/10 ## [33] "                                            Cultura 
+           Layout do São João 2023 de Campina Grande é divulgado09/05/2023 03:5
+9            "[] 
+ []
+
+
+Overfull \hbox (76.2434pt too wide) in paragraph at lines 811--811
+[]\T1/lmtt/m/n/10 ## [39] "Conversa PolíticaFatos políticos de forma clara e op
+inativa. Angélica Nunes e Laerte Cerqueira"[] 
+ []
+
+
+Overfull \hbox (196.99304pt too wide) in paragraph at lines 811--811
+[]\T1/lmtt/m/n/10 ## [40] "Pleno PoderNotícias da cobertura política de Campina
+ Grande e de todo o interior da Paraíba, por João Paulo Medeiros."[] 
+ []
+
+
+Overfull \hbox (417.4924pt too wide) in paragraph at lines 811--811
+[]\T1/lmtt/m/n/10 ## [41] "Caderno AnimalFabi e Miguel Cavalcanti abordam compo
+rtamento e saúde dos pets. Dicas, curiosidades, tutoria responsável e harmoniza
+ção entre animais e família."[] 
+ []
+
+
+Overfull \hbox (238.99292pt too wide) in paragraph at lines 811--811
+[]\T1/lmtt/m/n/10 ## [42] "Sílvio OsiasMuita cultura e uma pitada de entretenim
+ento, com abordagem de obras e questões relevantes da música e do cinema."[] 
+ []
+
+
+Overfull \hbox (55.24345pt too wide) in paragraph at lines 811--811
+[]\T1/lmtt/m/n/10 ## [43] "Saúde AlertaDicas e orientações para cuidar da saúde
+ e bem estar com o médico André Telis."[] 
+ []
+
+[11] [12]
+<modelo_inicial_scraping_files/figure-latex/unnamed-chunk-10-1.pdf, id=70, 446.
+66875pt x 313.17pt>
+File: modelo_inicial_scraping_files/figure-latex/unnamed-chunk-10-1.pdf Graphic
+ file (type pdf)
+<use modelo_inicial_scraping_files/figure-latex/unnamed-chunk-10-1.pdf>
+Package pdftex.def Info: modelo_inicial_scraping_files/figure-latex/unnamed-chu
+nk-10-1.pdf  used on input line 991.
+(pdftex.def)             Requested size: 446.67445pt x 313.174pt.
+[13] [14 <./modelo_inicial_scraping_files/figure-latex/unnamed-chunk-10-1.pdf>]
+LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
+1044.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/lm/ts1lmtt.fd
+File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [15]
+<modelo_inicial_scraping_files/figure-latex/unnamed-chunk-14-1.pdf, id=92, 111.
+41624pt x 107.40125pt>
+File: modelo_inicial_scraping_files/figure-latex/unnamed-chunk-14-1.pdf Graphic
+ file (type pdf)
+<use modelo_inicial_scraping_files/figure-latex/unnamed-chunk-14-1.pdf>
+Package pdftex.def Info: modelo_inicial_scraping_files/figure-latex/unnamed-chu
+nk-14-1.pdf  used on input line 1125.
+(pdftex.def)             Requested size: 111.41766pt x 107.4026pt.
+
+Overfull \hbox (18.49356pt too wide) in paragraph at lines 1166--1166
+[]\T1/lmtt/m/n/10 ##  [1] "Confira 15 ações que a prefeitura de João Pessoa pre
+vê para `recuperação' do Centro"[] 
+ []
+
+
+Overfull \hbox (34.24352pt too wide) in paragraph at lines 1166--1166
+[]\T1/lmtt/m/n/10 ##  [6] "Rita Lee apelidou o próprio tumor de `Jair' (Bolsona
+ro) e deixou profecia para velório"[] 
+ []
+
+
+Overfull \hbox (39.4935pt too wide) in paragraph at lines 1166--1166
+[]\T1/lmtt/m/n/10 ##  [8] "Nino Paraíba é citado em investigação por supostamen
+te participar de esquema de apostas"[] 
+ []
+
+
+Overfull \hbox (34.24352pt too wide) in paragraph at lines 1166--1166
+[]\T1/lmtt/m/n/10 ## [11] "Rita Lee apelidou o próprio tumor de `Jair' (Bolsona
+ro) e deixou profecia para velório"[] 
+ []
+
+
+Overfull \hbox (39.4935pt too wide) in paragraph at lines 1166--1166
+[]\T1/lmtt/m/n/10 ## [13] "Nino Paraíba é citado em investigação por supostamen
+te participar de esquema de apostas"[] 
+ []
+
+
+Overfull \hbox (34.24352pt too wide) in paragraph at lines 1166--1166
+[]\T1/lmtt/m/n/10 ## [14] "Caso Braiscompany: defesa adota estratégia `insana' 
+ao postergar apresentação de casal"[] 
+ []
+
+
+Overfull \hbox (233.74294pt too wide) in paragraph at lines 1166--1166
+[]\T1/lmtt/m/n/10 ## [15] "A retomada do turismo no Cariri: produções cinematog
+ráficas e fim da pandemia movimentam empreendedores na Roliúde Paraibana"[] 
+ []
+
+
+Overfull \hbox (28.99353pt too wide) in paragraph at lines 1166--1166
+[]\T1/lmtt/m/n/10 ## [16] "Boa Ventura, no Sertão da PB, escolhe vereadores em 
+eleição suplementar; veja eleitos"[] 
+ []
+
+[16 <./modelo_inicial_scraping_files/figure-latex/unnamed-chunk-14-1.pdf>]
+Overfull \hbox (18.49356pt too wide) in paragraph at lines 1201--1201
+[]\T1/lmtt/m/n/10 ##  [1] "Confira 15 ações que a prefeitura de João Pessoa pre
+vê para `recuperação' do Centro"[] 
+ []
+
+
+Overfull \hbox (34.24352pt too wide) in paragraph at lines 1201--1201
+[]\T1/lmtt/m/n/10 ##  [6] "Rita Lee apelidou o próprio tumor de `Jair' (Bolsona
+ro) e deixou profecia para velório"[] 
+ []
+
+
+Overfull \hbox (39.4935pt too wide) in paragraph at lines 1201--1201
+[]\T1/lmtt/m/n/10 ##  [8] "Nino Paraíba é citado em investigação por supostamen
+te participar de esquema de apostas"[] 
+ []
+
+
+Overfull \hbox (34.24352pt too wide) in paragraph at lines 1201--1201
+[]\T1/lmtt/m/n/10 ## [11] "Rita Lee apelidou o próprio tumor de `Jair' (Bolsona
+ro) e deixou profecia para velório"[] 
+ []
+
+
+Overfull \hbox (39.4935pt too wide) in paragraph at lines 1201--1201
+[]\T1/lmtt/m/n/10 ## [13] "Nino Paraíba é citado em investigação por supostamen
+te participar de esquema de apostas"[] 
+ []
+
+
+Overfull \hbox (34.24352pt too wide) in paragraph at lines 1201--1201
+[]\T1/lmtt/m/n/10 ## [14] "Caso Braiscompany: defesa adota estratégia `insana' 
+ao postergar apresentação de casal"[] 
+ []
+
+
+Overfull \hbox (233.74294pt too wide) in paragraph at lines 1201--1201
+[]\T1/lmtt/m/n/10 ## [15] "A retomada do turismo no Cariri: produções cinematog
+ráficas e fim da pandemia movimentam empreendedores na Roliúde Paraibana"[] 
+ []
+
+
+Overfull \hbox (28.99353pt too wide) in paragraph at lines 1201--1201
+[]\T1/lmtt/m/n/10 ## [16] "Boa Ventura, no Sertão da PB, escolhe vereadores em 
+eleição suplementar; veja eleitos"[] 
+ []
+
+[17]
+Overfull \hbox (7.99359pt too wide) in paragraph at lines 1313--1313
+[]\T1/lmtt/m/n/10 ##                                                           
+                        Título[] 
+ []
+
+
+Overfull \hbox (7.99359pt too wide) in paragraph at lines 1313--1313
+[]\T1/lmtt/m/n/10 ## 1    Confira 15 ações que a prefeitura de João Pessoa prev
+ê para `recuperação' do Centro[] 
+ []
+
+
+Overfull \hbox (7.99359pt too wide) in paragraph at lines 1313--1313
+[]\T1/lmtt/m/n/10 ## 2              Rita Lee, minha adorável Rita Lee, quando e
+scurece, eu levo o seu coração[] 
+ []
+
+
+Overfull \hbox (7.99359pt too wide) in paragraph at lines 1313--1313
+[]\T1/lmtt/m/n/10 ## 3                   Câncer de pulmão: entenda doença com a
+ qual Rita Lee foi diagnostica[] 
+ []
+
+
+Overfull \hbox (7.99359pt too wide) in paragraph at lines 1313--1313
+[]\T1/lmtt/m/n/10 ## 4                                          Dicas do Cartol
+a FC, rodada #5: quem escalar?[] 
+ []
+
+
+Overfull \hbox (7.99359pt too wide) in paragraph at lines 1313--1313
+[]\T1/lmtt/m/n/10 ## 5                          América-RN x Botafogo-PB: onde 
+assistir, horário e escalações[] 
+ []
+
+
+Overfull \hbox (7.99359pt too wide) in paragraph at lines 1313--1313
+[]\T1/lmtt/m/n/10 ## 6 Rita Lee apelidou o próprio tumor de `Jair' (Bolsonaro) 
+e deixou profecia para velório[] 
+ []
+
+[18]
+! ! Unable to read an entire line---bufsize=200000.
+! Please increase buf_size in texmf.cnf.
